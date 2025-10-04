@@ -1,5 +1,5 @@
 # nixos
-nixos configs, does not contain dotfiles, dotfiles are at https://github.com/Estherenne/dotfiles
+nixos configs, does not contain dotfiles, dotfiles are at https://github.com/Estherenne/dots
 
 runs on nixos unstable
 
