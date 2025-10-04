@@ -24,12 +24,13 @@
     # cli
     chezmoi
     ripgrep
-    fish
     eza
     fd
+    fish
     fzf
     zoxide
     fastfetch
+    starship
 
     # tuis
     dua
