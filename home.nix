@@ -20,6 +20,10 @@
     light
     rofi
     ghostty
+    wshowkeys
+    mako
+    wayfreeze
+    autotiling-rs
 
     # cli
     chezmoi
@@ -31,6 +35,7 @@
     zoxide
     fastfetch
     starship
+    jq
 
     # tuis
     dua
@@ -39,7 +44,16 @@
 
     # misc
     inputs.nixpkgs-25-05.legacyPackages.x86_64-linux.vulkan-tools
+    inputs.winapps.packages."${system}".winapps 
+    inputs.winapps.packages."${system}".winapps-launcher 
+    gamescope
   ];
+
+  services.mpd = {
+    enable = true;
+    musicDirectory = "~/Music/"; 
+    network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+  }; 
 
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "25.05";

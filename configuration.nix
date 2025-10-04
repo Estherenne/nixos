@@ -73,7 +73,7 @@
   users.users.ester = {
     isNormalUser = true;
     description = "Ester";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # enable steam
@@ -89,6 +89,15 @@
 
   # enable nix-helper
   programs.nh.enable = true;
+
+  # enable docker
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

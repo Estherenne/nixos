@@ -26,6 +26,8 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     vicinae.url = "github:vicinaehq/vicinae";
+
+    winapps.url = "github:winapps-org/winapps";
   };
 
   outputs = { self, nixpkgs, home-manager, vicinae, ... }@inputs: { 
