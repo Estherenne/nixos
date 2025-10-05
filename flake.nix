@@ -28,9 +28,11 @@
     vicinae.url = "github:vicinaehq/vicinae";
 
     winapps.url = "github:winapps-org/winapps";
+
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, vicinae, ... }@inputs: { 
+  outputs = { self, nixpkgs, home-manager, vicinae, sops-nix, ... }@inputs: { 
     nixosConfigurations.comet = nixpkgs.lib.nixosSystem {
       specialArgs = { 
         inherit inputs;
@@ -38,6 +40,7 @@
 
       modules = [
         ./configuration.nix
+        sops-nix.nixosModules.sops
 
         home-manager.nixosModules.home-manager {
           home-manager.extraSpecialArgs = {

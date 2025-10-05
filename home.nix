@@ -8,6 +8,7 @@
     # internet
     vesktop
     inputs.zen-browser.packages."${system}".twilight
+    qbittorrent
 
     # desktop
     waybar
@@ -24,6 +25,13 @@
     mako
     wayfreeze
     autotiling-rs
+    posy-cursors
+
+    # media
+    mpv
+    wl-screenrec
+    wf-recorder
+    obs-studio
 
     # cli
     chezmoi
@@ -54,6 +62,14 @@
     musicDirectory = "~/Music/"; 
     network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
   }; 
+
+  home.pointerCursor = {
+    name = "Posy";
+    size = 24;
+    package = pkgs.posy-cursors;
+    x11.enable = true;
+    gtk.enable = true; 
+  };
 
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "25.05";
