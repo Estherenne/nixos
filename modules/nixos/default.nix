@@ -3,21 +3,14 @@
 
 {
   imports = [
-    ./hardware/audio.nix
-    ./hardware/printing.nix
-    ./hardware/nvidia.nix
-    ./networking/networking.nix
-    # ./networking/ssh.nix
-    ./desktop/gnome.nix
-    ./desktop/sway.nix
-    ./desktop/localization.nix
-    ./desktop/x11.nix
-    ./desktop/steam.nix
-    ./linux/kernel.nix
-    ./linux/bootloader.nix
+    ./hardware
+    ./networking
+    ./desktop
+    ./linux
     ./fonts.nix
     ./docker.nix
     ./sops.nix
+    ./packages.nix
   ];
 
   # define myself
@@ -36,20 +29,8 @@
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # packages id like to have anywhere
-  environment.systemPackages = with pkgs; [
-    git
-    inputs.nvim-nightly.packages."${pkgs.system}".default
-    zig
-    sops
-    nvidia-vaapi-driver
-    vaapi-intel-hybrid
-    libva1
-    intel-media-driver
-    libva-utils
-    driversi686Linux.intel-vaapi-driver
-  ];
-
   # enable flatpak
   services.flatpak.enable = true;
+
+  system.stateVersion = "25.05";
 }

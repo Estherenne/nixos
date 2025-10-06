@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./modules/home
+    ./networking.nix
+    # ./ssh.nix
   ];
 }

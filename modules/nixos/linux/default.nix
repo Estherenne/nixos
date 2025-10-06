@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./modules/home
+    ./kernel.nix
+    ./bootloader.nix
   ];
 }

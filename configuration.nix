@@ -3,8 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/nixos/default.nix
+    ./modules/nixos
   ];
-
-  system.stateVersion = "25.05";
 }
