@@ -4,5 +4,6 @@ nixos configs, does not contain dotfiles, dotfiles are at https://github.com/Est
 runs on nixos unstable
 
 ## todo
-- [ ] modularize config
+- [x] modularize config
+    - [ ] turn all modules into actual nix modules that can be enabled with an option
 - [ ] start using sops-nix or agenix
