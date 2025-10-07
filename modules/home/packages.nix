@@ -6,6 +6,7 @@
     vesktop
     inputs.zen-browser.packages."${system}".twilight
     qbittorrent
+    nicotine-plus
 
     # desktop
     waybar
@@ -23,9 +24,10 @@
     wayfreeze
     autotiling-rs
     posy-cursors
+    libnotify
 
     # media
-    mpv
+    playerctl
     wl-screenrec
     wf-recorder
     obs-studio
@@ -41,6 +43,8 @@
     fastfetch
     starship
     jq
+    bun
+    deno
 
     # tuis
     dua
@@ -52,5 +56,7 @@
     inputs.winapps.packages."${system}".winapps 
     inputs.winapps.packages."${system}".winapps-launcher 
     gamescope
+    gamemode 
+    olympus 
   ];
 }

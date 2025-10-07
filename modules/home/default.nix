@@ -3,7 +3,7 @@
 {
   imports = [
     ./cursor.nix
-    ./mpd.nix
+    ./mpv.nix
     ./packages.nix
   ];
 
