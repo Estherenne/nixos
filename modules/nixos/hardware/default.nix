@@ -7,4 +7,6 @@
     ./printing.nix
     ./bluetooth.nix
   ];
+
+  hardware.enableRedistributableFirmware = true;
 }

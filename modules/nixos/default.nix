@@ -32,5 +32,9 @@
   # enable flatpak
   services.flatpak.enable = true;
 
+  programs.wshowkeys.enable = true;
+
+  services.power-profiles-daemon.enable = true;
+
   system.stateVersion = "25.05";
 }

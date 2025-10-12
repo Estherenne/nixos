@@ -10,5 +10,7 @@
     libva-utils
     python314
     bluetuith
+    cyme
+    pciutils
   ];
 }

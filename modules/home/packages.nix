@@ -7,6 +7,7 @@
     inputs.zen-browser.packages."${system}".twilight
     qbittorrent
     nicotine-plus
+    aerc
 
     # desktop
     waybar
@@ -19,18 +20,19 @@
     light
     rofi
     ghostty
-    wshowkeys
     mako
     wayfreeze
     autotiling-rs
     posy-cursors
     libnotify
+    gtklock
 
     # media
     playerctl
     wl-screenrec
     wf-recorder
     obs-studio
+    krita
 
     # cli
     chezmoi
@@ -38,18 +40,25 @@
     eza
     fd
     fish
-    fzf
     zoxide
     fastfetch
     starship
     jq
     bun
     deno
+    just
+    bitwarden-cli
+    nodejs_24
+    netlify-cli
+    eva
 
     # tuis
     dua
     btop
     yazi
+    tmux
+    fzf
+    zellij
 
     # misc
     inputs.nixpkgs-25-05.legacyPackages.x86_64-linux.vulkan-tools
