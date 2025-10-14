@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./gnome.nix
+    ./greetd.nix
     ./localization.nix
     ./steam.nix
     ./sway.nix

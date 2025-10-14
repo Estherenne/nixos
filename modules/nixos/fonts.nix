@@ -5,5 +5,7 @@
     monaspace
     nerd-fonts.symbols-only
     rubik
+    adwaita-fonts
+    google-fonts
   ];
 }

@@ -7,7 +7,6 @@
     inputs.zen-browser.packages."${system}".twilight
     qbittorrent
     nicotine-plus
-    aerc
 
     # desktop
     waybar
@@ -26,16 +25,17 @@
     posy-cursors
     libnotify
     gtklock
+    bitwarden-desktop
 
     # media
     playerctl
     wl-screenrec
-    wf-recorder
-    obs-studio
     krita
+    ffmpeg
 
     # cli
     chezmoi
+    bat
     ripgrep
     eza
     fd
@@ -46,9 +46,9 @@
     jq
     bun
     deno
+    nodejs_24
     just
     bitwarden-cli
-    nodejs_24
     netlify-cli
     eva
 
@@ -58,7 +58,6 @@
     yazi
     tmux
     fzf
-    zellij
 
     # misc
     inputs.nixpkgs-25-05.legacyPackages.x86_64-linux.vulkan-tools
@@ -67,5 +66,9 @@
     gamescope
     gamemode 
     olympus 
+    appimage-run 
+    gtklock-playerctl-module
+    gtk4
+    adwaita-icon-theme 
   ];
 }

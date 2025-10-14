@@ -36,5 +36,14 @@
 
   services.power-profiles-daemon.enable = true;
 
+  security.sudo-rs.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
+
+  programs.dconf.enable = true; 
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [];
+
   system.stateVersion = "25.05";
 }

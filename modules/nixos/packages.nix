@@ -12,5 +12,7 @@
     bluetuith
     cyme
     pciutils
+    uutils-coreutils-noprefix
+    woff2
   ];
 }
