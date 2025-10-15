@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     # internet
     vesktop
-    inputs.zen-browser.packages."${system}".twilight
     qbittorrent
     nicotine-plus
 

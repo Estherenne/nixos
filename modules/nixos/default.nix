@@ -17,7 +17,7 @@
   users.users.ester = {
     isNormalUser = true;
     description = "Ester";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "keyd" ];
   };
 
   # allow unfree
@@ -42,8 +42,15 @@
 
   programs.dconf.enable = true; 
 
+  services.desktopManager.plasma6.enable = true;
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    oxygen
+    elisa
+  ];
+
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [];
+  programs.nix-ld.libraries = with pkgs; []; 
 
   system.stateVersion = "25.05";
 }

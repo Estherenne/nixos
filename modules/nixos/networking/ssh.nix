@@ -3,13 +3,17 @@
 {
   services.openssh = {
     enable = true;
-    ports = [ 3366 ];
+    ports = [ 54873 ];
     settings = {
-      PasswordAuthentication = true;
-      X11Forwwarding = false;
+      PasswordAuthentication = false;
+      PubkeyAuthentication = true;
+      X11Forwarding = false;
       PermitRootLogin = "no";
     };
   };
 
-  services.fail2ban.enable = true;
+  services.endlessh = {
+    enable = true;
+    openFirewall = true;
+  };
 }

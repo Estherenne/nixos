@@ -14,5 +14,6 @@
     pciutils
     uutils-coreutils-noprefix
     woff2
+    keyd
   ];
 }
