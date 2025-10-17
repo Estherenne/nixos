@@ -1,7 +1,10 @@
 # everything in this file doesnt deserve its own separate file
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware
     ./networking
@@ -17,7 +20,7 @@
   users.users.ester = {
     isNormalUser = true;
     description = "Ester";
-    extraGroups = [ "networkmanager" "wheel" "docker" "keyd" ];
+    extraGroups = ["networkmanager" "wheel" "docker" "keyd"];
   };
 
   # allow unfree
@@ -27,7 +30,7 @@
   programs.nh.enable = true;
 
   # enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # enable flatpak
   services.flatpak.enable = true;
@@ -38,19 +41,12 @@
 
   security.sudo-rs.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
+  virtualisation.waydroid.enable = true;
 
-  programs.dconf.enable = true; 
-
-  services.desktopManager.plasma6.enable = true;
-
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    oxygen
-    elisa
-  ];
+  programs.dconf.enable = true;
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; []; 
+  programs.nix-ld.libraries = with pkgs; [];
 
   system.stateVersion = "25.05";
 }

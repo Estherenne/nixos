@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     git
     inputs.nvim-nightly.packages."${pkgs.system}".default
@@ -14,6 +17,8 @@
     pciutils
     uutils-coreutils-noprefix
     woff2
-    keyd
+    dnsmasq
+    gnumake
+    gcc
   ];
 }

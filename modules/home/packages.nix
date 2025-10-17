@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     # internet
     vesktop
@@ -25,12 +28,14 @@
     libnotify
     gtklock
     bitwarden-desktop
+    gcr
 
     # media
     playerctl
     wl-screenrec
     krita
     ffmpeg
+    pavucontrol
 
     # cli
     chezmoi
@@ -50,6 +55,7 @@
     bitwarden-cli
     netlify-cli
     eva
+    alejandra
 
     # tuis
     dua
@@ -58,16 +64,20 @@
     tmux
     fzf
 
+    # virtualisation
+    qemu 
+    quickemu
+
     # misc
     inputs.nixpkgs-25-05.legacyPackages.x86_64-linux.vulkan-tools
-    inputs.winapps.packages."${system}".winapps 
-    inputs.winapps.packages."${system}".winapps-launcher 
+    inputs.winapps.packages."${system}".winapps
+    inputs.winapps.packages."${system}".winapps-launcher
     gamescope
-    gamemode 
-    olympus 
-    appimage-run 
+    gamemode
+    olympus
+    appimage-run
     gtklock-playerctl-module
     gtk4
-    adwaita-icon-theme 
+    adwaita-icon-theme
   ];
 }

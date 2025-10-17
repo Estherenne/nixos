@@ -6,3 +6,6 @@ clean:
 
 update:
   nh os switch . --accept-flake-config -u
+
+format:
+  alejandra .

@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.openssh = {
     enable = true;
-    ports = [ 54873 ];
+    ports = [54873];
     settings = {
       PasswordAuthentication = false;
       PubkeyAuthentication = true;
