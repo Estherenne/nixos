@@ -20,5 +20,8 @@
     dnsmasq
     gnumake
     gcc
+    zellij
+    xplr
+    distrobox
   ];
 }

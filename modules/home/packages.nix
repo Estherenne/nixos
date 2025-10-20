@@ -9,6 +9,8 @@
     vesktop
     qbittorrent
     nicotine-plus
+    gajim
+    librewolf-bin
 
     # desktop
     waybar
@@ -29,6 +31,8 @@
     gtklock
     bitwarden-desktop
     gcr
+    xwayland-satellite
+    inputs.heylisten.packages."${system}".default
 
     # media
     playerctl
@@ -38,12 +42,13 @@
     pavucontrol
 
     # cli
+    gping
+    hugo
     chezmoi
     bat
     ripgrep
     eza
     fd
-    fish
     zoxide
     fastfetch
     starship
@@ -56,16 +61,31 @@
     netlify-cli
     eva
     alejandra
+    chafa
+    glow
+    pastel
+    hyperfine
+    vhs
+    rustup
+    jless
+    hexyl
+    arduino-cli
+    silicon
+    tealdeer
+    wikit
+    lf
 
     # tuis
     dua
-    btop
-    yazi
-    tmux
+    youtube-tui
+    bottom
     fzf
+    delta
+    lazygit
+    browsh
 
     # virtualisation
-    qemu 
+    qemu
     quickemu
 
     # misc
@@ -79,5 +99,6 @@
     gtklock-playerctl-module
     gtk4
     adwaita-icon-theme
+    poweralertd
   ];
 }

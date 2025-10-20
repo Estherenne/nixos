@@ -2,7 +2,7 @@
   description = "awesome flake";
 
   nixConfig = {
-    extra-substituters = [
+    trusted-extra-substituters = [
       "https://vicinae.cachix.org"
       "https://nix-community.cachix.org"
     ];
@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvim-nightly.url = "github:nix-community/neovim-nightly-overlay";
+    nvim-nightly.url = "github:/nix-community/neovim-nightly-overlay/8ed1dd5718108863216d0a1815f64c53000ca96a";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
@@ -30,6 +30,8 @@
     winapps.url = "github:winapps-org/winapps";
 
     sops-nix.url = "github:Mic92/sops-nix";
+
+    heylisten.url = "github:Estherenne/heylisten";
   };
 
   outputs = {
@@ -38,6 +40,7 @@
     home-manager,
     vicinae,
     sops-nix,
+    heylisten,
     ...
   } @ inputs: {
     nixosConfigurations.comet = nixpkgs.lib.nixosSystem {

@@ -16,11 +16,16 @@
     ./packages.nix
   ];
 
+  programs.fish.enable = true;
+
+  programs.niri.enable = true;
+
   # define myself
   users.users.ester = {
     isNormalUser = true;
     description = "Ester";
     extraGroups = ["networkmanager" "wheel" "docker" "keyd"];
+    shell = pkgs.fish;
   };
 
   # allow unfree
@@ -42,6 +47,8 @@
   security.sudo-rs.enable = true;
 
   virtualisation.waydroid.enable = true;
+
+  services.upower.enable = true;
 
   programs.dconf.enable = true;
 
