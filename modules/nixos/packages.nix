@@ -23,5 +23,7 @@
     zellij
     xplr
     distrobox
+    unzip
+    wireguard-tools
   ];
 }

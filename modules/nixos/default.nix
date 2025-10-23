@@ -14,6 +14,7 @@
     ./docker.nix
     ./sops.nix
     ./packages.nix
+    ./nix.nix
   ];
 
   programs.fish.enable = true;
@@ -28,15 +29,6 @@
     shell = pkgs.fish;
   };
 
-  # allow unfree
-  nixpkgs.config.allowUnfree = true;
-
-  # enable nix-helper
-  programs.nh.enable = true;
-
-  # enable flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   # enable flatpak
   services.flatpak.enable = true;
 
@@ -44,16 +36,14 @@
 
   services.power-profiles-daemon.enable = true;
 
-  security.sudo-rs.enable = true;
+  security.sudo.enable = false;
+  security.doas.enable = true;
 
   virtualisation.waydroid.enable = true;
 
   services.upower.enable = true;
 
   programs.dconf.enable = true;
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [];
 
   system.stateVersion = "25.05";
 }

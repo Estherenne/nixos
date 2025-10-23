@@ -10,14 +10,12 @@
     qbittorrent
     nicotine-plus
     gajim
-    librewolf-bin
 
     # desktop
     waybar
     matugen
     inputs.vicinae.packages."${system}".default
     swww
-    grim
     slurp
     wl-clipboard
     light
@@ -25,7 +23,6 @@
     ghostty
     mako
     wayfreeze
-    autotiling-rs
     posy-cursors
     libnotify
     gtklock
@@ -53,52 +50,47 @@
     fastfetch
     starship
     jq
-    bun
     deno
     nodejs_24
     just
     bitwarden-cli
-    netlify-cli
     eva
     alejandra
     chafa
-    glow
     pastel
     hyperfine
-    vhs
     rustup
     jless
     hexyl
     arduino-cli
     silicon
-    tealdeer
     wikit
     lf
+    uv
 
     # tuis
     dua
     youtube-tui
     bottom
     fzf
-    delta
     lazygit
-    browsh
 
     # virtualisation
     qemu
     quickemu
 
+    # gaming
+    gamescope
+    gamemode
+    olympus
+    prismlauncher
+
     # misc
     inputs.nixpkgs-25-05.legacyPackages.x86_64-linux.vulkan-tools
     inputs.winapps.packages."${system}".winapps
     inputs.winapps.packages."${system}".winapps-launcher
-    gamescope
-    gamemode
-    olympus
     appimage-run
-    gtklock-playerctl-module
     gtk4
     adwaita-icon-theme
-    poweralertd
   ];
 }
