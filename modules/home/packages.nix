@@ -10,6 +10,7 @@
     qbittorrent
     nicotine-plus
     gajim
+    mosh
 
     # desktop
     waybar
@@ -18,9 +19,8 @@
     swww
     slurp
     wl-clipboard
-    light
+    kitty
     rofi
-    ghostty
     mako
     wayfreeze
     posy-cursors
@@ -30,6 +30,7 @@
     gcr
     xwayland-satellite
     inputs.heylisten.packages."${system}".default
+    imv
 
     # media
     playerctl
@@ -39,6 +40,8 @@
     pavucontrol
 
     # cli
+    sd
+    xdg-user-dirs
     gping
     hugo
     chezmoi
@@ -59,6 +62,8 @@
     chafa
     pastel
     hyperfine
+    fortune
+    cowsay
     rustup
     jless
     hexyl
@@ -67,6 +72,8 @@
     wikit
     lf
     uv
+    vivid
+    ffmpegthumbnailer
 
     # tuis
     dua
@@ -74,9 +81,9 @@
     bottom
     fzf
     lazygit
+    w3m
 
     # virtualisation
-    qemu
     quickemu
 
     # gaming

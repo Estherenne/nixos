@@ -9,6 +9,7 @@
     inputs.nvim-nightly.packages."${pkgs.system}".default
     zig
     sops
+    age
     libva1
     libva-utils
     python314
@@ -25,5 +26,8 @@
     distrobox
     unzip
     wireguard-tools
+    carapace
+    qemu
+    polkit_gnome
   ];
 }

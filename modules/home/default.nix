@@ -7,6 +7,7 @@
     ./cursor.nix
     ./mpv.nix
     ./packages.nix
+    ./xdg.nix
   ];
 
   home.username = "ester";
