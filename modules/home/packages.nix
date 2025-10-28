@@ -31,6 +31,7 @@
     xwayland-satellite
     inputs.heylisten.packages."${system}".default
     imv
+    openrgb
 
     # media
     playerctl

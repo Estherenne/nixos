@@ -4,7 +4,8 @@
   ...
 }: {
   imports = [
-    ./doas.nix
-    ./polkit.nix
+    ./podman.nix
+    ./vm.nix
+    ./waydroid.nix
   ];
 }

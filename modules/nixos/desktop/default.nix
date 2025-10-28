@@ -8,5 +8,7 @@
     ./localization.nix
     ./steam.nix
     ./x11.nix
+    ./light.nix
+    ./niri.nix
   ];
 }

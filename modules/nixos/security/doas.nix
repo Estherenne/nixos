@@ -1,14 +1,19 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   security.sudo.enable = false;
 
   security.doas = {
     enable = true;
-    extraRules = [{
-      users = ["ester"];
+    extraRules = [
+      {
+        users = ["ester"];
 
-      keepEnv = true;
-      persist = true;
-    }];
+        keepEnv = true;
+        persist = true;
+      }
+    ];
   };
 }

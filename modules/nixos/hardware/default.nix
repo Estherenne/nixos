@@ -8,6 +8,7 @@
     ./graphics.nix
     ./printing.nix
     ./bluetooth.nix
+    ./openrgb.nix
   ];
 
   hardware.enableRedistributableFirmware = true;
