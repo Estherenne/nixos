@@ -10,5 +10,6 @@
     ./x11.nix
     ./light.nix
     ./niri.nix
+    ./thunar.nix
   ];
 }
