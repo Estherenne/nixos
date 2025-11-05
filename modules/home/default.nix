@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./packages
     ./cursor.nix
     ./mpv.nix
     ./packages.nix

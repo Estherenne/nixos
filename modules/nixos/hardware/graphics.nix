@@ -1,36 +1,23 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }: {
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      nvidia-vaapi-driver
-      vaapi-intel-hybrid
-      intel-media-driver
-      driversi686Linux.intel-vaapi-driver
-    ];
+  options = {
+    graphics.enable =
+      lib.mkEnableOption "Enable graphics, and install necessaary VA-API packages";
   };
 
-  # nvidia
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = true;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
+  config = lib.mkIf config.graphics.enable {
+    hardware.graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+        nvidia-vaapi-driver
+        vaapi-intel-hybrid
+        intel-media-driver
+        driversi686Linux.intel-vaapi-driver
+      ];
     };
   };
 }

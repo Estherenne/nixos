@@ -3,6 +3,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -12,10 +13,10 @@
     ./linux
     ./security
     ./virtualisation
+    ./nix
     ./fonts.nix
     ./sops.nix
     ./packages.nix
-    ./nix.nix
   ];
 
   programs.zsh.enable = true;
@@ -26,6 +27,18 @@
     description = "Ester";
     extraGroups = ["networkmanager" "wheel" "docker" "video" "libvirtd"];
     shell = pkgs.zsh;
+  };
+
+  nvidia.enable = true;
+  graphics.enable = true;
+  steam.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ];
   };
 
   # enable flatpak
