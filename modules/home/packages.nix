@@ -9,10 +9,13 @@
     vesktop # custom discord client
     qbittorrent # de-facto standard torrenting client
     nicotine-plus # soulseek client
-    mosh # mobile shell; a better ssh client
+    mosh # mobile shell; a better ssh
     filezilla # ftp & sftp client
+    jackett # api support for torrent trackers
+    ungoogled-chromium # google chrome, without integration with google
 
     # desktop
+    river-bsp-layout # binary space layout for river
     waybar # standard wayland bar
     matugen # generate material you color scheme from image
     inputs.vicinae.packages."${system}".default # raycast-compatible launcher
@@ -35,6 +38,11 @@
     thunderbird # GUI mail client
     nautilus # GUI file manager
     labwc # floating wayland compositor
+    wlsunset # adjust screen color temperature automatically
+    bemenu # lightweight launcher
+    picard # music tag editor
+    flameshot # x11 screenshotting tool
+    i3lock-fancy-rapid # x11 screen locker
 
     # media
     playerctl # control MPRIS
@@ -93,8 +101,8 @@
     fzf # fuzzy finder
     lazygit # TUI for git
     w3m # web browser
-    neomutt # mail client
-    irssi # IRC client
+    aerc # mail client
+    weechat # IRC client
 
     # gaming
     gamescope # valve's microcompositor for gaming
@@ -112,10 +120,11 @@
     appimage-run
     gtk4
     adwaita-icon-theme
-    pinentry # GPG's passphrase dialogue
-    pinentry-all
+    pinentry-all # GPG's passphrase dialogue
     wine-wayland
-    wine64 
-    winetricks 
+    wine64
+    winetricks
+    grim # screenshot a wayland output
+    kdePackages.kdeconnect-kde 
   ];
 }

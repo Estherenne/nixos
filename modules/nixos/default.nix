@@ -21,6 +21,10 @@
 
   programs.zsh.enable = true;
 
+  services.xserver.windowManager.awesome.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.startx.enable = true;
+
   # define myself
   users.users.ester = {
     isNormalUser = true;
@@ -38,6 +42,7 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
+      xdg-desktop-portal-wlr
     ];
   };
 
@@ -46,13 +51,15 @@
 
   programs.wshowkeys.enable = true;
 
-  services.power-profiles-daemon.enable = true;
+  services.tlp.enable = true;
 
   services.upower.enable = true;
 
   programs.dconf.enable = true;
 
   services.hardware.openrgb.enable = true;
+
+  programs.river.enable = true;
 
   system.stateVersion = "25.05";
 }
